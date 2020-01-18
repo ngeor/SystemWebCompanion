@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+	<metadata>
+		<id>SystemWebCompanion</id>
+		<version>2.0.7</version>
+		<authors>Nikolaos Georgiou</authors>
+		<description>SystemWebCompanion provides usual extension methods and custom controls needed in every ASP.NET web application.</description>
+		<projectUrl>https://github.com/ngeor/SystemWebCompanion/</projectUrl>
+		<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+		<dependencies>
+			<dependency id="log4net" version="2.0.8" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin/Release/SystemWebCompanion.dll" target="lib/net40" />
+		<file src="bin/Release/SystemWebCompanion.xml" target="lib/net40" />
+		<file src="web.config.transform" target="content/web.config.transform" />
+	</files>
+</package>

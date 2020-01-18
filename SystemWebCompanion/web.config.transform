@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<configuration>
+	<system.web>
+		<pages>
+			<controls>
+				<add assembly="SystemWebCompanion" namespace="System.Web.Companion.UI.WebControls" tagPrefix="swc"/>
+			</controls>
+		</pages>
+	</system.web>
+</configuration>
