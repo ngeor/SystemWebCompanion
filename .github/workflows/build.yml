@@ -19,4 +19,9 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore
     - name: Build project
-      run: msbuild -t:rebuild -verbosity:diag -property:Configuration=Release
+      run: msbuild -t:rebuild -property:Configuration=Release
+    - name: Upload binaries
+      uses: actions/upload-artifact@v2
+      with:
+        name: binaries
+        path: "*/bin/Release/*.dll"
