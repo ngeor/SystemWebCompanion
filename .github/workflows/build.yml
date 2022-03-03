@@ -8,12 +8,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '3.1.x'
-    - run: dotnet build
-    - run: dotnet test
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+    - run: msbuild -t:rebuild -verbosity:diag -property:Configuration=Release
