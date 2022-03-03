@@ -12,16 +12,16 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Add msbuild to PATH
+    - name: Add msbuild to PATH # https://github.com/microsoft/setup-msbuild
       uses: microsoft/setup-msbuild@v1.1
-    - name: Setup NuGet
+    - name: Setup NuGet # https://github.com/NuGet/setup-nuget
       uses: nuget/setup-nuget@v1
     - name: Restore NuGet packages
-      run: nuget restore
+      run: nuget restore SystemWebCompanion.sln
     - name: Build project
-      run: msbuild -t:rebuild -property:Configuration=Release
+      run: msbuild -t:rebuild -property:Configuration=Release SystemWebCompanion.sln
     - name: Upload binaries
       uses: actions/upload-artifact@v2
       with:
         name: binaries
-        path: "*/bin/Release/*.dll"
+        path: "*/bin/Release/net47/SystemWebCompanion.dll"
