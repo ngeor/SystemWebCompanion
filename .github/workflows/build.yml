@@ -21,7 +21,7 @@ jobs:
     - name: Build project
       run: msbuild -t:rebuild -property:Configuration=Release SystemWebCompanion.sln
     - name: Upload binaries
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: binaries
-        path: "SystemWebCompanion/bin/Release/net47/SystemWebCompanion.dll"
+        path: SystemWebCompanion*/bin/Release/*/SystemWebCompanion*.*
