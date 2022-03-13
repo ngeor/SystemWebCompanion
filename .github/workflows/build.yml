@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: binaries
-        path: SystemWebCompanion*/bin/Release/*/SystemWebCompanion*.*
+        path: SystemWebCompanion*/bin/Release/SystemWebCompanion*.*
